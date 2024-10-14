@@ -1,0 +1,15 @@
+<dx-data-grid
+  #dataGrid
+  [dataSource]="pontosTuristicos"
+  [searchPanel]="{ visible: true, width: 240, placeholder: 'Buscar...' }"
+  [filterRow]="{ visible: true }"
+  [paging]="{ pageSize: 10 }"
+  [pager]="{ showPageSizeSelector: true, allowedPageSizes: [5, 10, 20], showInfo: true }"
+  (onRowInserted)="onRowInserted($event)"
+  >
+  <dxi-column dataField="nome" caption="Nome"></dxi-column>
+  <dxi-column dataField="descricao" caption="Descrição"></dxi-column>
+  <dxi-column dataField="localizacao" caption="Localização"></dxi-column>
+  <dxi-column dataField="cidade" caption="Cidade"></dxi-column>
+  <dxi-column dataField="estado" caption="Estado"></dxi-column>
+</dx-data-grid>

@@ -1,0 +1,61 @@
+<section class="container">
+  <div class="row mb-2">
+    <div class="col-3">
+      <p>Estado:</p>
+      <dx-select-box
+        [dataSource]="estados"
+        [(value)]="estado"
+        displayExpr="getDisplayValue"
+        placeholder="Selecione o Estado..."
+        (onSelectionChanged)="listarCidades($event)"
+        [showClearButton]="true"
+      ></dx-select-box>
+    </div>
+
+    <div class="col-6">
+      <p>Cidade:</p>
+      <dx-select-box
+        [items]="cidades"
+        [(value)]="cidade"
+        displayExpr="getDisplayValue"
+        placeholder="Selecione a Cidade..."
+        (onSelectionChanged)="getCidadeSelecionada($event)"
+        [showClearButton]="true"
+      ></dx-select-box>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-12">
+      <p>Nome:</p>
+      <dx-text-box
+        [(value)]="nome"
+        placeholder="Digite o Nome"
+        [showClearButton]="true"
+      ></dx-text-box>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-12">
+      <p>Descrição:</p>
+      <dx-text-area
+        [(value)]="descricao"
+        placeholder="Digite a Descrição"
+      ></dx-text-area>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-12">
+      <p>Localização:</p>
+      <dx-text-box
+        [(value)]="localizacao"
+        placeholder="Digite a Localização"
+        [showClearButton]="true"
+      ></dx-text-box>
+    </div>
+  </div>
+
+  <button (click)="salvarInformacoes()" class="btn btn-primary">Salvar Informações</button>
+</section>
