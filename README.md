@@ -18,16 +18,16 @@ Banco de Dados: SQL SERVER
 
 Instalação
 
-1.Clone o repositório:
-git clone https://github.com/pedrobertani/WebAPI/
+1. Clone o repositório:
+   git clone https://github.com/pedrobertani/WebAPI/
 
-2.Navegue até o diretório do projeto: 
-WebApi
+3. Navegue até o diretório do projeto:
+   WebApi
 
-3.Instale as dependências:
-npm install
+4. Instale as dependências:
+   npm install
 
-4. Inicie o servidor:
+5. Inicie o servidor:
 ng server
 
 Uso
@@ -37,6 +37,7 @@ Selecione um estado no menu dropdown.
 As cidades do estado selecionado serão exibidas.
 Adicione os dados dos pontos turísticos na grade.
 Clique no botão "Salvar" para armazenar as informações.
+
 Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request ou reportar problemas.
