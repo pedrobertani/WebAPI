@@ -19,7 +19,8 @@ Banco de Dados: SQL SERVER
 Instalação
 
 1. Clone o repositório:
-   git clone https://github.com/pedrobertani/WebAPI/
+   git clone https://github.com/pedrobertani/WebAPI.git
+   Git Cli gh repo clone pedrobertani/WebAPI
 
 3. Navegue até o diretório do projeto:
    WebApi
