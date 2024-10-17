@@ -19,31 +19,31 @@ public class PontosTuristicosController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<IEnumerable<PontoTuristicoDto>>> GetAll()
     {
-        var touristSpotsDto = await _service.GetAllAsync();
-        return Ok(touristSpotsDto);
+        var pontoTuristicoDto = await _service.GetAllAsync();
+        return Ok(pontoTuristicoDto);
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<PontoTuristicoDto>> GetPontosTuristicosById(int id)
     {
-        var touristSpotDto = await _service.GetByIdAsync(id);
-        if (touristSpotDto == null)
+        var pontoTuristicoDto = await _service.GetByIdAsync(id);
+        if (pontoTuristicoDto == null)
         {
             return NotFound();
         }
-        return Ok(touristSpotDto);
+        return Ok(pontoTuristicoDto);
     }
 
     [HttpPost]
-    public async Task<ActionResult<PontoTuristicoDto>> Create(PontoTuristicoDto touristSpotDto)
+    public async Task<ActionResult<PontoTuristicoDto>> Create(PontoTuristicoDto pontoTuristicoDto)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        var createdTouristSpotDto = await _service.AddAsync(touristSpotDto);
+        var createdPontoTuristicoDto = await _service.AddAsync(pontoTuristicoDto);
 
-        return CreatedAtAction(nameof(GetPontosTuristicosById), new { id = createdTouristSpotDto.Id }, createdTouristSpotDto);
+        return CreatedAtAction(nameof(GetPontosTuristicosById), new { id = createdPontoTuristicoDto.Id }, createdPontoTuristicoDto);
     }
 }
